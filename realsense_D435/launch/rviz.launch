@@ -1,0 +1,7 @@
+<launch>
+<arg name="rvizconfig" default="$(find realsense_D435)/launch/urdf.rviz" />
+<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" />
+<include file="$(find realsense2_camera)/launch/rs_camera.launch">
+<arg name="filters"  value="pointcloud"/>
+</include>
+</launch>
